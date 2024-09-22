@@ -1,15 +1,18 @@
+-- Creación de la base de datos
 create database restaurant_management;
-use restaurant_management;
+   use restaurant_management;
 
-create table platillos(
-	id int primary key auto_increment,
-    name varchar(50),
-    price double(10,2),
-    enable boolean
-);
+-- Creación de la tabla Plato
+create table Plato (
+       id int auto_increment primary key,
+       nombre varchar(100) not null ,
+       precio decimal(10, 2) not null ,
+       disponibilidad boolean not null 
+   );
 
-create table mesas(
-	id int primary key auto_increment,
-    table_number int,
-    busy boolean
-);
+-- Creación de la tabla Mesa
+create table Mesa (
+       id int auto_increment primary key,
+       numero_mesa int not null unique,
+       ocupada boolean not null 
+   );
