@@ -27,11 +27,11 @@ restaurant-management/
 │
 ├── src/main/java/com/restaurant/management/
 │   ├── controller/
-│   │   ├── PlatoController.java
 │   │   ├── MesaController.java
+│   │   ├── PlatoController.java
 │   ├── model/
-│   │   ├── Plato.java
-│   │   ├── Mesa.java
+│   │   ├── PlatoModel.java
+│   │   ├── MesaModel.java
 │   ├── repository/
 │   │   ├── PlatoRepository.java
 │   │   ├── MesaRepository.java
@@ -74,9 +74,9 @@ restaurant-management/
    En el archivo `src/main/resources/application.properties`, configura la conexión a MySQL con tus credenciales:
 
    ```properties
-   spring.datasource.url=jdbc:mysql://localhost:3306/restaurant_management
-   spring.datasource.username=tu_usuario
-   spring.datasource.password=tu_contraseña
+   spring.datasource.url=jdbc:mysql://172.16.101.159:3306/restaurant_management
+   spring.datasource.username=root
+   spring.datasource.password=1097095601
    spring.jpa.hibernate.ddl-auto=update
    spring.jpa.show-sql=true
    ```
